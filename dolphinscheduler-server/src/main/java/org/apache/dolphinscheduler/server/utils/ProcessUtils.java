@@ -188,7 +188,7 @@ public class ProcessUtils {
             String log;
             try (LogClientService logClient = new LogClientService()) {
                 log = logClient.viewLog(Host.of(taskExecutionContext.getHost()).getIp(),
-                        Constants.RPC_PORT,
+                        Host.of(taskExecutionContext.getHost()).getPort(),
                         taskExecutionContext.getLogPath());
             }
             if (!StringUtils.isEmpty(log)) {
