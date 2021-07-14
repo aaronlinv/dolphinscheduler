@@ -34,14 +34,10 @@ import org.junit.Test;
 
 public class LoggerServerTest {
 
-    private LoggerServer loggerServer;
-
     private LogClientService logClientService;
 
     @Before
     public void startServerAndClient() {
-        this.loggerServer = new LoggerServer();
-        this.loggerServer.start();
         this.logClientService = new LogClientService();
     }
 
@@ -74,7 +70,6 @@ public class LoggerServerTest {
 
     @After
     public void stopServerAndClient() {
-        this.loggerServer.stop();
         this.logClientService.close();
     }
 }
