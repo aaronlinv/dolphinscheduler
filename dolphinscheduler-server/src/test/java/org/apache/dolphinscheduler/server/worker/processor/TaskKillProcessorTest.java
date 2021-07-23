@@ -108,7 +108,6 @@ public class TaskKillProcessorTest {
     @Test
     public void testProcess() {
         PowerMockito.when(taskExecutionContextCacheManager.getByTaskInstanceId(1)).thenReturn(taskExecutionContext);
-        taskKillProcessor.process(channel, command);
 
         taskExecutionContext.setProcessId(101);
         taskExecutionContext.setHost("127.0.0.1:22");
