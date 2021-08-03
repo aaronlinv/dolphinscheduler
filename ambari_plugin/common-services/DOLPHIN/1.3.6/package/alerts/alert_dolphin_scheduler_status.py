@@ -85,8 +85,6 @@ def execute(configurations={}, parameters={}, host_name=None):
         pid_file_path = dolphin_pidfile_dir + "/worker-server.pid"
     elif alert_name == 'DOLPHIN_ALERT':
         pid_file_path = dolphin_pidfile_dir + "/alert-server.pid"
-    elif alert_name == 'DOLPHIN_LOGGER':
-        pid_file_path = dolphin_pidfile_dir + "/logger-server.pid"
     elif alert_name == 'DOLPHIN_API':
         pid_file_path = dolphin_pidfile_dir + "/api-server.pid"
         

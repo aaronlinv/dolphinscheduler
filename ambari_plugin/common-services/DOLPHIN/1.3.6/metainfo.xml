@@ -35,31 +35,10 @@
                 </component>
 
                 <component>
-                    <name>DOLPHIN_LOGGER</name>
-                    <displayName>DS Logger</displayName>
-                    <category>SLAVE</category>
-                    <cardinality>1+</cardinality>
-                    <commandScript>
-                        <script>scripts/dolphin_logger_service.py</script>
-                        <scriptType>PYTHON</scriptType>
-                        <timeout>600</timeout>
-                    </commandScript>
-                </component>
-
-                <component>
                     <name>DOLPHIN_WORKER</name>
                     <displayName>DS Worker</displayName>
                     <category>SLAVE</category>
                     <cardinality>1+</cardinality>
-                    <dependencies>
-                        <dependency>
-                            <name>DOLPHIN/DOLPHIN_LOGGER</name>
-                            <scope>host</scope>
-                            <auto-deploy>
-                                <enabled>true</enabled>
-                            </auto-deploy>
-                        </dependency>
-                    </dependencies>
                     <commandScript>
                         <script>scripts/dolphin_worker_service.py</script>
                         <scriptType>PYTHON</scriptType>
