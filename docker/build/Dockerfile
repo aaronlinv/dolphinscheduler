@@ -66,6 +66,6 @@ RUN sed -i 's/*.conf$/*.ini/' /etc/supervisor/supervisord.conf && \
     echo "Set disable_coredump false" >> /etc/sudo.conf
 
 # 4. expose port
-EXPOSE 5678 1234 12345 50051 50052
+EXPOSE 5678 1234 12345 50052
 
 ENTRYPOINT ["/usr/bin/tini", "--", "/root/startup.sh"]
