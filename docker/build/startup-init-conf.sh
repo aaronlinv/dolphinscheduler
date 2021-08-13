@@ -115,11 +115,6 @@ export ALERT_PLUGIN_DIR=${ALERT_PLUGIN_DIR:-"lib/plugin/alert"}
 #============================================================================
 export API_SERVER_OPTS=${API_SERVER_OPTS:-"-Xms512m -Xmx512m -Xmn256m"}
 
-#============================================================================
-# Logger Server
-#============================================================================
-export LOGGER_SERVER_OPTS=${LOGGER_SERVER_OPTS:-"-Xms512m -Xmx512m -Xmn256m"}
-
 echo "generate dolphinscheduler config"
 ls ${DOLPHINSCHEDULER_HOME}/conf/ | grep ".tpl" | while read line; do
 eval "cat << EOF
