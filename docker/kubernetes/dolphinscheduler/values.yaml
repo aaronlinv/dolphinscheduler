@@ -215,7 +215,6 @@ worker:
   #     cpu: "500m"
   ## Configmap
   configmap:
-    LOGGER_SERVER_OPTS: "-Xms512m -Xmx512m -Xmn256m"
     WORKER_SERVER_OPTS: "-Xms1g -Xmx1g -Xmn512m"
     WORKER_EXEC_THREADS: "100"
     WORKER_HEARTBEAT_INTERVAL: "10"
