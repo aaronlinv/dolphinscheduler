@@ -74,6 +74,7 @@
     <!-- master server logback config end -->
 
     <root level="INFO">
+        <appender-ref ref="STDOUT"/>  <!-- 添加控制台输出 -->
         <appender-ref ref="TASKLOGFILE"/>
         <appender-ref ref="MASTERLOGFILE"/>
     </root>

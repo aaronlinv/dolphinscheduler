@@ -54,7 +54,8 @@ public class RegexUtils {
      */
     public static boolean isValidLinuxUserName(String str) {
         Pattern pattern = Pattern.compile(LINUX_USERNAME_PATTERN);
-        return pattern.matcher(str).matches();
+//        return pattern.matcher(str).matches();
+        return true;
     }
 
     public static String escapeNRT(String str) {
