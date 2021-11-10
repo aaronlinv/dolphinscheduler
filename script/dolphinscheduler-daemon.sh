@@ -81,10 +81,6 @@ elif [ "$command" = "alert-server" ]; then
   CLASS=org.apache.dolphinscheduler.alert.AlertServer
   HEAP_OPTS="-Xms1g -Xmx1g -Xmn512m"
   export DOLPHINSCHEDULER_OPTS="$HEAP_OPTS $DOLPHINSCHEDULER_OPTS $ALERT_SERVER_OPTS"
-elif [ "$command" = "logger-server" ]; then
-  CLASS=org.apache.dolphinscheduler.server.log.LoggerServer
-  HEAP_OPTS="-Xms1g -Xmx1g -Xmn512m"
-  export DOLPHINSCHEDULER_OPTS="$HEAP_OPTS $DOLPHINSCHEDULER_OPTS $LOGGER_SERVER_OPTS"
 elif [ "$command" = "zookeeper-server" ]; then
   #note: this command just for getting a quick experience，not recommended for production. this operation will start a standalone zookeeper server
   LOG_FILE="-Dlogback.configurationFile=classpath:logback-zookeeper.xml"
