@@ -23,7 +23,6 @@ export MASTER_START_ENABLED=false
 export WORKER_START_ENABLED=false
 export API_START_ENABLED=false
 export ALERT_START_ENABLED=false
-export LOGGER_START_ENABLED=false
 export STANDALONE_START_ENABLED=false
 
 # wait database
@@ -89,7 +88,6 @@ case "$1" in
         export WORKER_START_ENABLED=true
         export API_START_ENABLED=true
         export ALERT_START_ENABLED=true
-        export LOGGER_START_ENABLED=true
     ;;
     (master-server)
         waitZK
@@ -100,7 +98,6 @@ case "$1" in
         waitZK
         waitDatabase
         export WORKER_START_ENABLED=true
-        export LOGGER_START_ENABLED=true
     ;;
     (api-server)
         waitZK
